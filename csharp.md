@@ -385,7 +385,41 @@ string filenameTimeStamped = $@"C:\Users\usr1\Desktop\ExpiryReport\GeneratedRepo
                         p.Save();
                     }
 ```
-
+## Save DataTable as Excel File with proper formatting(date)
+```csharp
+    public static string ExportToExcel (ref DataTable dt,string reportName)
+        {
+           string fileName = $@"Report-MCRS_{reportName}_{DateTime.Now:yyyyMMdd_HHmmsss}.xlsx";
+           string filePath = Path.Combine(ConfigurationManager.AppSettings["ExportFileLoc"].ToString(),fileName);
+           //write date to execl file
+           //Open the workbook (or create it if it doesn't exist)
+           var fi = new FileInfo(filePath);
+           using (var p = new ExcelPackage(fi))
+           {
+               if (p.Workbook.Worksheets.Count< 1)
+               {
+                p.Workbook.Worksheets.Add("Report");
+               }
+               var ws = p.Workbook.Worksheets[0];
+               //write dataTable to excel.
+               ExcelRangeBase range=ws.Cells[2, 1].LoadFromDataTable(dt, true, TableStyles.Light14);
+               //dt.Columns[0].DataType
+               for (int i = 0; i < dt.Columns.Count; i++)
+               {
+                   Type type = dt.Columns[i].DataType;
+                   if (type == Type.GetType("System.DateTime"))
+                   {
+                       //ws col starts from 1 
+                       ws.Column(i+1).Style.Numberformat.Format = "dd-mmm-yyyy";
+                   }
+               }
+               range.AutoFitColumns();                
+               p.Save();
+               nlog.Info($"Added data {dt.Rows.Count} to Excel File {filePath}");
+               return fileName;
+           }
+        }
+```
 ## Download file from WebAPi/Send file to client
 - In Controller.cs file add the following.
 ```csharp
