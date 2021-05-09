@@ -97,3 +97,8 @@ END
  ```sql
  select * from callRecords where CAST(CallStartDateTimeGMT AS DATE)>= CAST(@CalledBetween_FromDate_param AS DATE)
  ```	
+## List All dependencies
+```sql
+SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent
+FROM sys.dm_sql_referencing_entities ('dbo.UserPrivilege', 'OBJECT'); --dbo.UserPrivilege is Table to be searched
+```
