@@ -17,6 +17,7 @@ Configuring CI helps you build application as soon as changes are checked in (co
 ![Set correct Server Path]( screenShots/2021-07-13_16_09_57.png)
 
 ### 5. Select ASP.NET template
+![alt]( screenShots/2021-07-13_16_15_18.png)
 
 ### 6. Select desired Agent Pool and set Artifact Name.
 ![Agent Pool]( screenShots/2021-07-13_16_17_32.png)
