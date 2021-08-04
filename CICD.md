@@ -70,4 +70,4 @@ Go to Piplines > Releases. and click New pipeline.
 ![alt]( screenShots/2021-08-04_18_13_23.png)
 ![alt]( screenShots/2021-08-04_18_20_40.png)
 ![alt]( screenShots/2021-08-04_18_32_08.png)
-![alt]( screenShots/2021-08-04_18_44_49.png)
+![alt]( screenShots/2021-08-04_18_44_09.png)
