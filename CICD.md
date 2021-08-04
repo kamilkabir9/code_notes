@@ -61,5 +61,13 @@ Configuring CI helps you build application as soon as changes are checked in (co
 
 
 ## 4. Configure CD
-
-
+Go to Piplines > Releases. and click New pipeline.
+![alt]( screenShots/2021-08-04_16_42_29.png)
+![alt]( screenShots/2021-08-04_16_43_11.png)
+![alt]( screenShots/2021-08-04_16_44_22.png)
+![alt]( screenShots/2021-08-04_16_45_14.png)
+![alt]( screenShots/2021-08-04_16_47_36.png)
+![alt]( screenShots/2021-08-04_18_13_23.png)
+![alt]( screenShots/2021-08-04_18_20_40.png)
+![alt]( screenShots/2021-08-04_18_32_08.png)
+![alt]( screenShots/2021-08-04_18_44_49.png)
