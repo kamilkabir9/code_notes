@@ -3,8 +3,18 @@
 How to apply CI/CD to applications
 
 # Steps
-## 1. Configure build agents.
-## 2. Configure deploy agents.
+## 1. Configure Build agents.
+### Deploy agents to Build Machines.
+![alt]( screenShots/2021-08-05_11_59_38.png)
+![alt]( screenShots/2021-08-05_12_00_21.png)
+![alt]( screenShots/2021-08-05_12_00_57.png)
+
+## 2. Configure Deploy agents.
+### Deploy agents to Application Server.
+![alt]( screenShots/2021-08-05_12_06_51.png)
+![alt]( screenShots/2021-08-05_12_05_23.png)
+![alt]( screenShots/2021-08-05_12_06_15.png)
+
 ## 3. Configure CI.
 Configuring CI helps you build application as soon as changes are checked in (configurable).
 ### Steps
@@ -61,6 +71,7 @@ Configuring CI helps you build application as soon as changes are checked in (co
 
 
 ## 4. Configure CD
+### Continuous Delivery will deploy Build Artifacts from Continuous Build to Application Server using Build Agents.
 Go to Piplines > Releases. and click New pipeline.
 ![alt]( screenShots/2021-08-04_16_42_29.png)
 ![alt]( screenShots/2021-08-04_16_43_11.png)
