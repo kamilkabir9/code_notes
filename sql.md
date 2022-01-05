@@ -102,3 +102,9 @@ END
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent
 FROM sys.dm_sql_referencing_entities ('dbo.UserPrivilege', 'OBJECT'); --dbo.UserPrivilege is Table to be searched
 ```
+## Get isoweek
+```sql
+SELECT YEAR(DATEADD(day, 26 - DATEPART(isoww, '2012-01-01'), '2012-01-01'))
+```
+[1](https://capens.net/content/sql-year-iso-week)
+[2](https://stackoverflow.com/questions/26926271/sql-get-iso-year-for-iso-week)
