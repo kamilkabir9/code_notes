@@ -1,4 +1,4 @@
-# SQl
+# SQL
 
 ## Date formating 
 -  Format date as 01-Feb-2019
