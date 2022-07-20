@@ -200,3 +200,24 @@ export class AppModule {}
 ```ts
 import { EnvService } from '../env.service';
 ```
+# :100: Setup & Install & Run & Build Angular Projects
+
+ :hammer_and_wrench: Install appropriate node version (make sure to RUN command in **ADMIN** mode)
+ 
+  `nvm install 18.15.0`
+    
+ :arrows_counterclockwise: Switch to appropriate node version (make sure to RUN command in **ADMIN** mode)
+ 
+ `nvm use 18.15.0`
+    
+ :inbox_tray: Install node modules
+ 
+ `npm install`
+    
+:arrow_forward: Run project
+ 
+ `npm run ng serve`
+    
+ :building_construction: Build project. Build files are available in dist folder
+ 
+ `npm run ng build`
